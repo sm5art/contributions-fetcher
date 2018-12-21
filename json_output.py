@@ -11,6 +11,8 @@ def main():
 		for field in fields:
 			point[field] = row[field]
 		point['type'] = int(point['type'])
+		if point['type'] != 0:
+			point['html_url'] = ''
 		point['index'] = i
 		data.append(point)
 	with open("output.json", "w") as f:
